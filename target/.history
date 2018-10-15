@@ -1,0 +1,2 @@
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo /private/var/folders/jt/nqnqdxbd2899b6df42v4mdw87_pypx/T/sbt-structure.xml; session clear-all
+all {file:/Volumes/Transcend/tutorial/scala/ScalaJson/}scalajson/products {file:/Volumes/Transcend/tutorial/scala/ScalaJson/}scalajson/test:products
