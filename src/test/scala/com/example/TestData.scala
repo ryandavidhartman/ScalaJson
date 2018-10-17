@@ -1,6 +1,6 @@
 package com.example
 
-import com.example._
+import scala.collection.immutable.ListMap
 
 object TestData {
 
@@ -37,20 +37,20 @@ object TestData {
   """.stripMargin
 
   val testJsonObj = JObj(
-    Map( "firstName" -> JString("John"),
+    ListMap( "firstName" -> JString("John"),
          "lastName" -> JString("Smith"),
          "isAlive" -> JBool(true),
          "age" -> JNum(27),
-         "address" -> JObj(Map( "streetAddress" -> JString("21 2nd Street"),
+         "address" -> JObj(ListMap( "streetAddress" -> JString("21 2nd Street"),
            "city" -> JString("New York"),
            "state" -> JString("NY"),
            "postalCode" -> JString("10021-3100")
            )
          ),
          "phoneNumbers" -> JSeq(
-          List( JObj(Map( "type" -> JString("home"), "number" -> JString("212 555-1234") )),
-                JObj(Map( "type" -> JString("office"), "number" -> JString("646 555-4567") )),
-                JObj(Map( "type" -> JString("mobile"), "number" -> JString("123 456-7890" )))
+          List( JObj(ListMap( "type" -> JString("home"), "number" -> JString("212 555-1234") )),
+                JObj(ListMap( "type" -> JString("office"), "number" -> JString("646 555-4567") )),
+                JObj(ListMap( "type" -> JString("mobile"), "number" -> JString("123 456-7890" )))
           )
         ),
         "children" -> JSeq(Seq.empty),
