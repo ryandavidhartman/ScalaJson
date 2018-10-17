@@ -21,7 +21,7 @@ object JSON {
       s"{${assocs  mkString(", ")}}"
     }
     case JNum(n) => n.toString
-    case JString(s) => s""""${s}"""
+    case JString(s) => s""""${s}""""
     case JBool(b) => b.toString
     case JNull => "null"
   }

@@ -44,7 +44,8 @@ object TestData {
          "address" -> JObj(Map( "streetAddress" -> JString("21 2nd Street"),
            "city" -> JString("New York"),
            "state" -> JString("NY"),
-           "postalCode" -> JNum(10021-3100) )
+           "postalCode" -> JString("10021-3100")
+           )
          ),
          "phoneNumbers" -> JSeq(
           List( JObj(Map( "type" -> JString("home"), "number" -> JString("212 555-1234") )),
