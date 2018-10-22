@@ -7,7 +7,7 @@ class JSONSpecs extends FlatSpec {
   import TestData._
 
   "The JSON converterter" should "do basic conversions" in {
-    assert(testJsonString.replaceAll("\\s", "") === JSON.toString(testJsonObj).replaceAll("\\s", ""))
+    assert(testPersonJsonString.replaceAll("\\s", "") === JSON.toString(testPersonJsonObj).replaceAll("\\s", ""))
 }
 
 

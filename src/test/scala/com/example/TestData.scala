@@ -1,10 +1,32 @@
 package com.example
 
+import com.example
+
 import scala.collection.immutable.ListMap
+
+case class Address(
+  streetAddress: String,
+  city: String,
+  state: String,
+  postalCode: String)
+
+case class PhoneNumber(
+  `type`: String,
+  number: String)
+
+case class Person(
+  firstName: String,
+  lastName: String,
+  isAlive: Boolean,
+  age: Double,
+  address: Address,
+  phoneNumbers: Seq[PhoneNumber],
+  children: Seq[Person],
+  spouse: Option[Person])
 
 object TestData {
 
-  val testJsonString =
+  val testPersonJsonString =
   """
     |{
     |  "firstName": "John",
@@ -36,7 +58,7 @@ object TestData {
     |}
   """.stripMargin
 
-  val testJsonObj = JObj(
+  val testPersonJsonObj = JObj(
     ListMap( "firstName" -> JString("John"),
          "lastName" -> JString("Smith"),
          "isAlive" -> JBool(true),
@@ -57,5 +79,24 @@ object TestData {
         "spouse" -> JNull
       )
   )
+
+
+  val testPersonClass = Person(
+    firstName = "John",
+    lastName=  "Smith",
+    isAlive =  true,
+    age = 27.0,
+    address = Address (
+      streetAddress = "21 2nd Street",
+      city = "New York",
+      state = "NY",
+      postalCode = "10021-3100"),
+    phoneNumbers = Seq(
+      PhoneNumber(`type` = "home", number = "212 555-1234"),
+      PhoneNumber(`type` = "office",  number = "646 555-4567"),
+      PhoneNumber(`type` = "mobile",  number = "123 456-7890")
+    ),
+  children = Seq.empty,
+  spouse = None)
 
 }

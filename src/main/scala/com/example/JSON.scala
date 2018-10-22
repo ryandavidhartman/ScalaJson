@@ -14,6 +14,8 @@ case object JNull extends JSON
 
 object JSON {
 
+  type JBinding = (String, JSON)
+
   def toString(json: JSON): String = json match {
     case JSeq(elems) => s"[${elems map toString mkString(", ")}]"
     case JObj(bindings) => {
