@@ -72,7 +72,7 @@ object TestData {
          "phoneNumbers" -> JSeq(
           List( JObj(ListMap( "type" -> JString("home"), "number" -> JString("212 555-1234") )),
                 JObj(ListMap( "type" -> JString("office"), "number" -> JString("646 555-4567") )),
-                JObj(ListMap( "type" -> JString("mobile"), "number" -> JString("123 456-7890" )))
+                JObj(ListMap( "type" -> JString("mobile"), "number" -> JString("123 456-7890") ))
           )
         ),
         "children" -> JSeq(Seq.empty),
@@ -93,8 +93,8 @@ object TestData {
       postalCode = "10021-3100"),
     phoneNumbers = Seq(
       PhoneNumber(`type` = "home", number = "212 555-1234"),
-      PhoneNumber(`type` = "office",  number = "646 555-4567"),
-      PhoneNumber(`type` = "mobile",  number = "123 456-7890")
+      PhoneNumber(`type` = "office", number = "646 555-4567"),
+      PhoneNumber(`type` = "mobile", number = "123 456-7890")
     ),
   children = Seq.empty,
   spouse = None)
